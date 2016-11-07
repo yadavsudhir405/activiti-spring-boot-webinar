@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef">
+  <process id="MyFirstApp" name="MyFirstApp" isExecutable="true">
+    <documentation>This is my first app.</documentation>
+    <startEvent id="startEvent1"></startEvent>
+    <serviceTask id="sid-B7701893-416A-47F3-8D48-C187CB112E28" name="Email Task
+" activiti:type="mail">
+      <extensionElements>
+        <activiti:field name="to">
+          <activiti:string><![CDATA[sudhiris056@live.in]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="from">
+          <activiti:string><![CDATA[yadavsudhir405@gmail.com]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:string><![CDATA[Email From Activity Engine]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="html">
+          <activiti:string><![CDATA[Message Fro Activity]]></activiti:string>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <sequenceFlow id="sid-2693E9BE-4810-4A2C-A689-B1F34388E290" sourceRef="startEvent1" targetRef="sid-B7701893-416A-47F3-8D48-C187CB112E28"></sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_MyFirstApp">
+    <bpmndi:BPMNPlane bpmnElement="MyFirstApp" id="BPMNPlane_MyFirstApp">
+      <bpmndi:BPMNShape bpmnElement="startEvent1" id="BPMNShape_startEvent1">
+        <omgdc:Bounds height="30.0" width="30.0" x="270.0" y="205.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-B7701893-416A-47F3-8D48-C187CB112E28" id="BPMNShape_sid-B7701893-416A-47F3-8D48-C187CB112E28">
+        <omgdc:Bounds height="80.0" width="100.0" x="480.0" y="180.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="sid-2693E9BE-4810-4A2C-A689-B1F34388E290" id="BPMNEdge_sid-2693E9BE-4810-4A2C-A689-B1F34388E290">
+        <omgdi:waypoint x="300.0" y="220.0"></omgdi:waypoint>
+        <omgdi:waypoint x="480.0" y="220.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
