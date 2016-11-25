@@ -9,4 +9,6 @@ Go to modules/activiti-spring-boot/ and execute 'mvn clean install -DskipTests'
 
 Now you can import this demo project in your IDE.
 
+The code  has been modified by me.
+
 
